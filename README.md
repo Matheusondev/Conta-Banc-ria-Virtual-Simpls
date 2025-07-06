@@ -12,7 +12,7 @@
 
 ---
 
-## 🧠 Sobre o projeto
+## 🧠 Sobre o "projeto"
 
 Este é um sistema bancário fictício que simula operações básicas como consulta de saldo, recebimento de valores e transferências. Tudo acontece via terminal, com menus interativos e lógica simples, ideal para iniciantes em Java.
 
