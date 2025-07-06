@@ -5,7 +5,7 @@ public class Desafios {
         Scanner leitura = new Scanner(System.in);
         double valorTransferir = 0;
         double saldoInicial = 2500.00;
-
+        int operacao = 0;
         System.out.println("""
                  **************************************
                  Dados do cliente:
@@ -27,14 +27,13 @@ public class Desafios {
                 
                 ****************************************
                 """);
-        while (5 == 5) {
+        while (operacao != 4) {
             System.out.println("""
-                    
                     Digite a operação desejada:
                     """);
-            int operacao = leitura.nextInt();
+             operacao = leitura.nextInt();
             if (operacao == 1) {
-                System.out.println(String.format("O seu saldo atual é de " + saldoInicial));
+                System.out.println("O seu saldo atual é de " + saldoInicial);
             } else if (operacao == 2) {
                 System.out.println("Digite o valor que quer receber:");
                 double valorReceber = leitura.nextDouble();
