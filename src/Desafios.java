@@ -31,27 +31,31 @@ public class Desafios {
             System.out.println("""
                     Digite a operação desejada:
                     """);
-             operacao = leitura.nextInt();
-            if (operacao == 1) {
-                System.out.println("O seu saldo atual é de " + saldoInicial);
-            } else if (operacao == 2) {
-                System.out.println("Digite o valor que quer receber:");
-                double valorReceber = leitura.nextDouble();
-                saldoInicial = saldoInicial + valorReceber;
-                System.out.println("Seu saldo atual é de: " + saldoInicial);
-            } else if (operacao == 3) {
-                System.out.println("Digite o valor que quer transferir:");
-                valorTransferir = leitura.nextDouble();
-                if (valorTransferir > saldoInicial) {
-                    System.out.println("Você não tem saldo para isso.");
-                } else{
-                    saldoInicial = saldoInicial - valorTransferir;
-                    System.out.println("Seu saldo atual é de: " + saldoInicial);}
-            } if (operacao == 4) {
-                break;
+            operacao = leitura.nextInt();
+            switch (operacao) {
+                case 1:
+                    System.out.println("Seu saldo atual é de: " + saldoInicial);
+                    break;
+                case 2:
+                    System.out.println("Digite o quanto quer receber:");
+                    double valorReceber = leitura.nextDouble();
+                    saldoInicial += valorReceber;
+                    System.out.println("Seu saldo atual é de: " + saldoInicial);
+                    break;
+                case 3:
+                    System.out.println("Digite o quanto quer transfeir:");
+                    valorTransferir = leitura.nextDouble();
+                    if (valorTransferir > saldoInicial){
+                        System.out.println("Você não tem saldo suficiente");
+                    } else {
+                        saldoInicial -= valorTransferir;
+                    }
+                    System.out.println("Seu saldo atual é de: " + saldoInicial);
+                    break;
+                case 4:
+                    System.out.println("Saindo...");
+                    return;
             }
-
-
         }
     }
 }
